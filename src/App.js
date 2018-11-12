@@ -106,12 +106,19 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>How Popular is Your Favorite Movie?</h2>
-<<<<<<< HEAD
+        {profiles.map(profile => {
+          const userName = users[profile.userID].name;
+          const favMovie = movies[profile.favoriteMovieID].name;
+          return  ([userName,favMovie].join(" "))
 
-        <p>Test sync from hoppa</p>
-=======
-        <h3>test sync - from udacity</h3>
->>>>>>> e7a2df0e03071cc588ec74f0937ea98f8950f69e
+    
+          
+        })}
+
+          <ul>
+            <li>movies</li>
+          </ul>
+
       </div>
     );
   }
