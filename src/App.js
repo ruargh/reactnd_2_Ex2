@@ -110,7 +110,7 @@ class App extends Component {
 
         <p>Test sync from hoppa</p>
 =======
-<h3>test sync - from udacity</h3>
+        <h3>test sync - from udacity</h3>
 >>>>>>> e7a2df0e03071cc588ec74f0937ea98f8950f69e
       </div>
     );
