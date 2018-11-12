@@ -106,8 +106,12 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>How Popular is Your Favorite Movie?</h2>
+<<<<<<< HEAD
 
         <p>Test sync from hoppa</p>
+=======
+<h3>test sync - from udacity</h3>
+>>>>>>> e7a2df0e03071cc588ec74f0937ea98f8950f69e
       </div>
     );
   }
