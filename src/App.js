@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MovieCardContainer from './components/MovieCardContainer';
 
 /*
 Display a list of movies where each movie contains a list of users that favorited it.
@@ -12,89 +13,89 @@ const profiles = [
   {
     id: 1,
     userID: '1',
-    favoriteMovieID: '1',
+    favoriteMovieID: '1'
   },
   {
     id: 2,
     userID: '2',
-    favoriteMovieID: '1',
+    favoriteMovieID: '1'
   },
   {
     id: 3,
     userID: '4',
-    favoriteMovieID: '5',
+    favoriteMovieID: '5'
   },
   {
     id: 4,
     userID: '5',
-    favoriteMovieID: '2',
+    favoriteMovieID: '2'
   },
   {
     id: 5,
     userID: '3',
-    favoriteMovieID: '5',
+    favoriteMovieID: '5'
   },
   {
     id: 6,
     userID: '6',
-    favoriteMovieID: '4',
-  },
+    favoriteMovieID: '4'
+  }
 ];
 
 const users = {
   1: {
     id: 1,
     name: 'Jane Jones',
-    userName: 'coder',
+    userName: 'coder'
   },
   2: {
     id: 2,
     name: 'Matthew Johnson',
-    userName: 'mpage',
+    userName: 'mpage'
   },
   3: {
     id: 3,
     name: 'Autumn Green',
-    userName: 'user123',
+    userName: 'user123'
   },
   4: {
     id: 3,
     name: 'John Doe',
-    userName: 'user123',
+    userName: 'user123'
   },
   5: {
     id: 5,
     name: 'Lauren Carlson',
-    userName: 'user123',
+    userName: 'user123'
   },
   6: {
     id: 6,
     name: 'Nicholas Lain',
-    userName: 'user123',
-  },
+    userName: 'user123'
+  }
 };
 
 const movies = {
   1: {
     id: 1,
-    name: 'Planet Earth',
+    name: 'Planet Earth'
   },
   2: {
     id: 2,
-    name: 'Selma',
+    name: 'Selma'
   },
   3: {
     id: 3,
-    name: 'Million Dollar Baby',
+    name: 'Million Dollar Baby'
   },
   4: {
     id: 4,
-    name: 'Forrest Gump',
+    name: 'Forrest Gump'
   },
   5: {
     id: 5,
-    name: 'Get Out',
-  },
+    name: 'Get Out'
+  }
 };
 
 class App extends Component {
@@ -109,16 +110,14 @@ class App extends Component {
         {profiles.map(profile => {
           const userName = users[profile.userID].name;
           const favMovie = movies[profile.favoriteMovieID].name;
-          return  ([userName,favMovie].join(" "))
-
-    
-          
+          return [userName, favMovie].join(' ');
         })}
 
-          <ul>
-            <li>movies</li>
-          </ul>
+        <ul>
+          <li>movies</li>
+        </ul>
 
+        <MovieCardContainer profiles={profiles} users={users} movies={movies} />
       </div>
     );
   }
